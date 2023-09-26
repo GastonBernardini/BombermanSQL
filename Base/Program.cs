@@ -34,7 +34,7 @@ namespace MyGame
         private static void Initialize()
         {
             Engine.Initialize();
-            player = (new Character(new Vector2(0, 0), 100, "assets/player.png"));
+            player = (new Character(new Vector2(0, 0), 100, 30, "assets/player.png"));
             _startTime = DateTime.Now;
         }
 
