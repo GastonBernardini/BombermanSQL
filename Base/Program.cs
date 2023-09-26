@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading;
@@ -13,28 +11,44 @@ namespace MyGame
     {
                     
         static IntPtr image = Engine.LoadImage("assets/fondo.png");
-   
+        private static DateTime _startTime;
+        private static float _lastTimeFrame;
+        public static float DeltaTime;
+        public static Character player;
+        public static List<Bomb> bombList = new List<Bomb>();
 
         static void Main(string[] args)
         {
-            Engine.Initialize();
-     
+            Initialize();
+
             while (true)
             {
                 Update();
 
-                Engine.Clear();
-
-                Engine.Draw(image, 0, 0);
-          
-                Engine.Show();
+                Render();
 
                 Sdl.SDL_Delay(20);
             }
         }
 
+        private static void Initialize()
+        {
+            Engine.Initialize();
+            player = (new Character(new Vector2(0, 0), 100, "assets/player.png"));
+            _startTime = DateTime.Now;
+        }
+
         private static void Update()
         {
+
+            float currentTime = (float)(DateTime.Now - _startTime).TotalSeconds;
+            DeltaTime = currentTime - _lastTimeFrame;
+            _lastTimeFrame = currentTime;
+
+            player.Update();
+
+            //Console.Write(DeltaTime + Environment.NewLine);
+
             if (Engine.KeyPress(Engine.KEY_LEFT)) {  }
 
             if (Engine.KeyPress(Engine.KEY_RIGHT)) {  }
@@ -44,12 +58,24 @@ namespace MyGame
             if (Engine.KeyPress(Engine.KEY_DOWN)) {  }
 
             if (Engine.KeyPress(Engine.KEY_ESC)) { }
-
-
-
-
         }
 
+        public static void Render()
+
+        {
+            Engine.Clear();
+            Engine.Draw(image, 0, 0);
+            player.Render();
+            if (bombList.Count > 0)
+            {
+                foreach (Bomb bomb in bombList)
+                {
+                    bomb.Render();
+                }
+            }
+            Engine.Show();
+
+        }
     }
 
 }

@@ -66,3 +66,13 @@ C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.csproj.
 C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.csproj.CopyComplete
 C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.exe
 C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.pdb
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\player.png
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\fondo.png
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\MyGame.exe.config
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\MyGame.exe
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\MyGame.pdb
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.csproj.CopyComplete
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.exe
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.pdb
