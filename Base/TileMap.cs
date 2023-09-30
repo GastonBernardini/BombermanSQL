@@ -56,7 +56,7 @@ namespace MyGame
 
         }
 
-        public void update()
+        public void Render()
         {
             for (int row = 0; row < tiles1.GetLength(0); row++)
             {

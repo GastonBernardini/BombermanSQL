@@ -67,7 +67,7 @@ namespace MyGame
         {
             Engine.Clear();
             Engine.Draw(image, 0, 0);
-            tileMap.update();
+            tileMap.Render();
             player.Render();
             if (bombList.Count > 0)
             {
