@@ -76,3 +76,8 @@ D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.csproj.C
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.csproj.CopyComplete
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.exe
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.pdb
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.exe
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.pdb
