@@ -84,3 +84,8 @@ C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.pdb
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\tile0.png
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\tile1.png
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\tile2.png
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\GameOver.png
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\MainMenu.png
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Win.png
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\bomba.png
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\explosion.png
