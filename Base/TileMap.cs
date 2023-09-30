@@ -47,7 +47,7 @@ namespace MyGame
 
         public void update()
         {
-            for (int row = 0;  row < tiles1.GetLength(0); row++)
+            for (int row = 0; row < tiles1.GetLength(0); row++)
             {
                 for (int col = 0; col < tiles1.GetLength(1); col++)
                 {
@@ -62,8 +62,8 @@ namespace MyGame
                     if (tiles1[row, col] == 2)
                     {
                         Engine.Draw(tile2, row * tileSize, col * tileSize);
-                    }
 
+                    }
                 }
             }
         }
