@@ -16,7 +16,7 @@ namespace MyGame
         public static float DeltaTime;
         public static Character player;
         public static List<Bomb> bombList = new List<Bomb>();
-        public static TileMap tileMap;
+        //public static TileMap tileMap;
 
         static void Main(string[] args)
         {
@@ -36,7 +36,7 @@ namespace MyGame
         {
             Engine.Initialize();
             player = (new Character(new Vector2(0, 0), 75, 30, "assets/player.png"));
-            tileMap = (new TileMap());
+            //tileMap = (new TileMap());
             _startTime = DateTime.Now;
         }
 
@@ -67,7 +67,7 @@ namespace MyGame
         {
             Engine.Clear();
             Engine.Draw(image, 0, 0);
-            tileMap.update();
+            TileMap.Instance.Render();
             player.Render();
             if (bombList.Count > 0)
             {
