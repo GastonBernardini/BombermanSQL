@@ -81,3 +81,5 @@ C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.Sugges
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.exe
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.pdb
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\tile0.png
+D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\tile1.png

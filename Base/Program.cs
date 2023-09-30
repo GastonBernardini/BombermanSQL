@@ -16,6 +16,7 @@ namespace MyGame
         public static float DeltaTime;
         public static Character player;
         public static List<Bomb> bombList = new List<Bomb>();
+        public static TileMap tileMap;
 
         static void Main(string[] args)
         {
@@ -35,6 +36,7 @@ namespace MyGame
         {
             Engine.Initialize();
             player = (new Character(new Vector2(0, 0), 100, 30, "assets/player.png"));
+            tileMap = (new TileMap(75));
             _startTime = DateTime.Now;
         }
 
@@ -73,6 +75,7 @@ namespace MyGame
                     bomb.Render();
                 }
             }
+            tileMap.update();
             Engine.Show();
 
         }

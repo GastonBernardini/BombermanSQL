@@ -11,8 +11,8 @@ class Engine
 
     public static void Initialize()
     {
-        ancho = 1024;
-        alto = 768;
+        ancho = 1125;
+        alto = 975;
         int colores = 24;
 
         int flags = (Sdl.SDL_HWSURFACE | Sdl.SDL_DOUBLEBUF | Sdl.SDL_ANYFORMAT);
