@@ -10,6 +10,21 @@ namespace MyGame
 {
     internal class TileMap
     {
+        private static TileMap instance;
+
+        public static TileMap Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new TileMap();
+                }
+
+                return instance;
+            }
+        }
+
         private IntPtr tile0 = Engine.LoadImage("assets/tile0.png");
         private IntPtr tile1 = Engine.LoadImage("assets/tile1.png");
         private IntPtr tile2 = Engine.LoadImage("assets/tile2.png");
