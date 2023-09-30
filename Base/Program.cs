@@ -35,8 +35,8 @@ namespace MyGame
         private static void Initialize()
         {
             Engine.Initialize();
-            player = (new Character(new Vector2(0, 0), 100, 30, "assets/player.png"));
-            tileMap = (new TileMap(75));
+            player = (new Character(new Vector2(0, 0), 75, 30, "assets/player.png"));
+            tileMap = (new TileMap());
             _startTime = DateTime.Now;
         }
 
@@ -67,6 +67,7 @@ namespace MyGame
         {
             Engine.Clear();
             Engine.Draw(image, 0, 0);
+            tileMap.update();
             player.Render();
             if (bombList.Count > 0)
             {
@@ -75,7 +76,6 @@ namespace MyGame
                     bomb.Render();
                 }
             }
-            tileMap.update();
             Engine.Show();
 
         }

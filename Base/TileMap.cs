@@ -37,12 +37,23 @@ namespace MyGame
             {0,2,0,2,0,2,0,2,0,2,0,2,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0}
         };
-
-        private int tileSize;
-
-        public TileMap(int tileSize)
+        public int[,] Tiles1
         {
-            this.tileSize = tileSize;
+            get
+            {
+                return tiles1;
+            }
+            set
+            {
+                tiles1 = value;
+            }
+        }
+
+        private int tileSize = 75;
+
+        public TileMap()
+        {
+
         }
 
         public void update()
