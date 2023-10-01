@@ -27,6 +27,10 @@ namespace MyGame
 
         public void Update()
         {
+
+            int tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
+            int tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
+
             if (currentTimer == movementTimer)
             {
                 if (Engine.KeyPress(Engine.KEY_LEFT))
@@ -58,10 +62,14 @@ namespace MyGame
 
             if (Engine.KeyPress(Engine.KEY_ESP)) 
             {
-                Program.bombList.Add(new Bomb(transform.Position, 100, "assets/player.png"));
+                Program.bombList.Add(new Bomb(transform.Position, 100, "assets/bomba.png"));
             };
 
 
+            if (TileMap.Instance.Tiles1[tilex,tiley] == 3)
+            {
+                GameManager.Instance.ChangeGameStatus(3);
+            }
         }
 
         public void Render()
