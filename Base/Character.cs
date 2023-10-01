@@ -14,9 +14,6 @@ namespace MyGame
         private float currentTimer;
         private IntPtr image;
 
-        //private Animation currentAnimation;
-        //private Animation idleAnimation;
-
         public Character(Vector2 pos, float speed, float movementTimer, string image)
         {
             transform = new Transform(pos, new Vector2(100, 100));
@@ -27,7 +24,6 @@ namespace MyGame
 
         public void Update()
         {
-
             int tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
             int tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
 
