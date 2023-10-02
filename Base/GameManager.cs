@@ -39,6 +39,10 @@ namespace MyGame
                     break;
                 case 1:
                     Program.Update();
+                    if (TileMap.Instance.CurrentDestroyableBuildings == 0)
+                    {
+                        gameStatus = 2;
+                    }
                     break;
                 case 2:
                     //  Program.Update();

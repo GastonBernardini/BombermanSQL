@@ -29,30 +29,9 @@ namespace MyGame
         private IntPtr tile1 = Engine.LoadImage("assets/tile1.png"); //pared destruible
         private IntPtr tile2 = Engine.LoadImage("assets/tile2.png"); //pared indestructible
         private IntPtr tile3 = Engine.LoadImage("assets/explosion.png"); //explosion
+        private int currentDestroyableBuildings = 1;
 
-        private int[,] tiles0 = new int[,]{
-            {1,1,1,1,1,1,1,0,1,1,1,1,1,1,1},
-            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-            {1,1,1,1,2,1,1,1,1,3,1,1,1,1,1}
-        };
-
-        /*private int[,] tiles1 = new int[,]{
-            {0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,2,0,2,0,2,0,2,0,2,0,2,0},
-            {0,1,0,0,0,0,0,0,0,0,0,0,0},
-            {0,2,0,2,0,2,1,2,0,2,0,2,0},
-            {0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,2,0,2,0,2,0,2,0,2,0,2,0},
-            {0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,2,0,2,0,2,0,2,0,2,0,2,0},
-            {0,0,0,0,0,0,0,0,0,0,0,1,0},
-            {0,2,0,2,0,2,0,2,0,2,0,2,0},
-            {0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,2,0,2,0,2,0,2,0,2,0,2,0},
-            {0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,2,0,2,0,2,0,2,0,2,0,2,0},
-            {0,0,0,0,0,0,0,0,0,0,0,0,0}
-        };*/
+        public int CurrentDestroyableBuildings => currentDestroyableBuildings;
 
         private int[,] tiles1 = new int[,]{
             {2,2,2,2,2,2,2,2,2,2,2,2,2},
@@ -93,7 +72,7 @@ namespace MyGame
             {
                 for (int col = 0; col < tiles1.GetLength(1); col++)
                 {
-                    if (tiles1[row, col] == 0)
+                    if (tiles1[row, col] == 0 || tiles1[row, col] == 4 )
                     {
                         Engine.Draw(tile0, row * tileSize, col * tileSize);
                     }
@@ -115,7 +94,18 @@ namespace MyGame
 
         public void Update()
         {
-
+            currentDestroyableBuildings = 0;
+            for (int row = 0; row < tiles1.GetLength(0); row++)
+            {
+                for (int col = 0; col < tiles1.GetLength(1); col++)
+                {
+                    if (tiles1[row, col] == 1)
+                    {
+                        currentDestroyableBuildings++;
+                    }
+                    
+                }
+            }
         }
     }
 }

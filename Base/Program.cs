@@ -48,6 +48,7 @@ namespace MyGame
             _lastTimeFrame = currentTime;
 
             player.Update();
+            TileMap.Instance.Update();
 
             if (bombList.Count > 0)
             {
