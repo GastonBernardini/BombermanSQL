@@ -22,9 +22,6 @@ namespace MyGame
         public int TileX => tilex;
         public int TileY => tiley;
 
-        //private Animation currentAnimation;
-        //private Animation idleAnimation;
-
         public Character(Vector2 pos, float speed, float movementTimer, string image)
         {
             transform = new Transform(pos, new Vector2(100, 100));
