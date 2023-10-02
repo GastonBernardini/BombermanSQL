@@ -64,8 +64,7 @@ namespace MyGame
         {
             Engine.Clear();
             Engine.Draw(image, 0, 0);
-            TileMap.Instance.Render();
-            player.Render();
+            TileMap.Instance.Render();           
             if (bombList.Count > 0)
             {
                 foreach (Bomb bomb in bombList)
@@ -73,6 +72,7 @@ namespace MyGame
                     bomb.Render();
                 }
             }
+            player.Render();
             Engine.Show();
 
         }
