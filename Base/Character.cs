@@ -21,6 +21,13 @@ namespace MyGame
         private bool isCollidingDown = false;
         public int TileX => tilex;
         public int TileY => tiley;
+        private Animation currentAnimation;
+        private Animation rightAnimation;
+        private Animation leftAnimation;
+        private Animation upAnimation;
+        private Animation downAnimation;
+        private Animation idleAnimation;
+
 
         public Character(Vector2 pos, float speed, float movementTimer, string image)
         {
@@ -28,14 +35,16 @@ namespace MyGame
             this.movementTimer = movementTimer;
             this.speed = speed;
             this.image = Engine.LoadImage(image);
+            CreateAnimations();
+            currentAnimation = idleAnimation;
         }
 
         public void Update()
         {
-            
-             tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
+            AnimationCharacter();
+            tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
              tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
-             IsColliding();
+             IsColliding();           
             if (currentTimer == movementTimer)
             {
                 if (Engine.KeyPress(Engine.KEY_LEFT)&& !isCollidingLeft)
@@ -58,6 +67,7 @@ namespace MyGame
                     transform.Translate(new Vector2(0, 1), speed);
                     currentTimer = 0;
                 }
+                
             };
 
             if (currentTimer < movementTimer)
@@ -79,14 +89,14 @@ namespace MyGame
 
         public void Render()
         {
-            Engine.Draw(image, transform.Position.x, transform.Position.y);
+            Engine.Draw(currentAnimation.CurrentFrame, transform.Position.x, transform.Position.y);
         }
         private void IsColliding()
         {
             if (TileMap.Instance.Tiles1[tilex +1,tiley] != 0)
             {
                 isCollidingRight = true;
-                Console.WriteLine("colisiona derecha");
+                //Console.WriteLine("colisiona derecha");
             }
             else
             {
@@ -95,7 +105,7 @@ namespace MyGame
             if (TileMap.Instance.Tiles1[tilex - 1, tiley] != 0)
             {
                 isCollidingLeft = true;
-                Console.WriteLine("colisiona izquierda");
+                //Console.WriteLine("colisiona izquierda");
             }
             else
             {
@@ -104,7 +114,7 @@ namespace MyGame
             if (TileMap.Instance.Tiles1[tilex , tiley +1 ] != 0)
             {
                 isCollidingDown = true;
-                Console.WriteLine("colisiona abajo");
+                //Console.WriteLine("colisiona abajo");
             }
             else
             {
@@ -113,12 +123,77 @@ namespace MyGame
             if (TileMap.Instance.Tiles1[tilex , tiley - 1] != 0)
             {
                 isCollidingUp = true;
-                Console.WriteLine("colisiona arriba");
+                //Console.WriteLine("colisiona arriba");
             }
             else
             {
                 isCollidingUp = false;
             }
+        }
+        private void CreateAnimations()
+        {
+            List<IntPtr> PlayerRightTextures = new List<IntPtr>();
+            for (int i = 0; i < 4; i++)
+            {
+                IntPtr frame = Engine.LoadImage($"assets/Player/B_Right/B_Right{i}.png");
+                PlayerRightTextures.Add(frame);
+            }
+            rightAnimation = new Animation("WalkRight", PlayerRightTextures, 0.2f, true);
+            
+            List<IntPtr> PlayerLeftTextures = new List<IntPtr>();
+            for (int i = 0; i < 4; i++)
+            {
+                IntPtr frame = Engine.LoadImage($"assets/Player/B_Left/B_Left{i}.png");
+                PlayerLeftTextures.Add(frame);
+            }
+            leftAnimation = new Animation("WalkLeft", PlayerLeftTextures, 0.2f, true);
+
+            List<IntPtr> PlayerUpTextures = new List<IntPtr>();
+            for (int i = 0; i < 5; i++)
+            {
+                IntPtr frame = Engine.LoadImage($"assets/Player/B_Up/B_Up{i}.png");
+                PlayerUpTextures.Add(frame);
+            }
+            upAnimation = new Animation("WalkUp", PlayerUpTextures, 0.2f, true);
+
+            List<IntPtr> PlayerDownTextures = new List<IntPtr>();
+            for (int i = 0; i < 4; i++)
+            {
+                IntPtr frame = Engine.LoadImage($"assets/Player/B_Down/B_Down{i}.png");
+                PlayerDownTextures.Add(frame);
+            }
+            downAnimation = new Animation("WalkDown", PlayerDownTextures, 0.2f, true);
+
+            List<IntPtr> PlayerIdleTextures = new List<IntPtr>();
+            for (int i = 0; i < 1; i++)
+            {
+                IntPtr frame = Engine.LoadImage($"assets/Player/B_Idle/B_Idle{i}.png");
+                PlayerIdleTextures.Add(frame);
+            }
+            idleAnimation = new Animation("WalkLeft", PlayerIdleTextures, 0.2f, true);
+        }
+        private void AnimationCharacter()
+        {
+            currentAnimation.Update();
+            currentAnimation = idleAnimation;
+            
+            if (Engine.KeyPress(Engine.KEY_LEFT) && !isCollidingLeft)   
+            {
+                currentAnimation = leftAnimation;
+            }
+            if (Engine.KeyPress(Engine.KEY_RIGHT) && !isCollidingRight)
+            {
+                currentAnimation = rightAnimation;
+            }
+            if (Engine.KeyPress(Engine.KEY_UP) && !isCollidingUp)
+            {
+                currentAnimation = upAnimation;
+            }
+            if (Engine.KeyPress(Engine.KEY_DOWN) && !isCollidingDown)
+            {
+                currentAnimation = downAnimation;
+            }
+
         }
     }
 }
