@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Bomb.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="Colitions.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="GameManager.cs" />
