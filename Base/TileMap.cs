@@ -25,9 +25,10 @@ namespace MyGame
             }
         }
 
-        private IntPtr tile0 = Engine.LoadImage("assets/tile0.png");
-        private IntPtr tile1 = Engine.LoadImage("assets/tile1.png");
-        private IntPtr tile2 = Engine.LoadImage("assets/tile2.png");
+        private IntPtr tile0 = Engine.LoadImage("assets/tile0.png"); //pasto
+        private IntPtr tile1 = Engine.LoadImage("assets/tile1.png"); //pared destruible
+        private IntPtr tile2 = Engine.LoadImage("assets/tile2.png"); //pared indestructible
+        private IntPtr tile3 = Engine.LoadImage("assets/explosion.png"); //explosion
 
         private int[,] tiles0 = new int[,]{
             {1,1,1,1,1,1,1,0,1,1,1,1,1,1,1},
@@ -35,7 +36,7 @@ namespace MyGame
             {1,1,1,1,2,1,1,1,1,3,1,1,1,1,1}
         };
 
-        private int[,] tiles1 = new int[,]{
+        /*private int[,] tiles1 = new int[,]{
             {0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,2,0,2,0,2,0,2,0,2,0,2,0},
             {0,1,0,0,0,0,0,0,0,0,0,0,0},
@@ -51,6 +52,24 @@ namespace MyGame
             {0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,2,0,2,0,2,0,2,0,2,0,2,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0}
+        };*/
+
+        private int[,] tiles1 = new int[,]{
+            {2,2,2,2,2,2,2,2,2,2,2,2,2},
+            {2,0,1,0,0,0,0,0,0,0,0,0,2},
+            {2,0,2,0,2,0,2,0,2,0,2,0,2},
+            {2,0,0,0,0,0,0,0,0,0,0,0,2},
+            {2,0,2,1,2,0,2,0,2,1,2,0,2},
+            {2,0,0,0,0,0,0,0,0,0,0,0,2},
+            {2,0,2,0,2,0,2,0,2,0,2,0,2},
+            {2,0,0,0,0,0,0,0,0,0,0,0,2},
+            {2,0,2,0,2,0,2,1,2,0,2,0,2},
+            {2,0,1,0,0,0,0,0,0,0,1,0,2},
+            {2,0,2,0,2,0,2,0,2,0,2,0,2},
+            {2,0,0,0,0,0,0,0,0,0,0,0,2},
+            {2,1,2,1,2,0,2,0,2,0,2,0,2},
+            {2,0,0,0,0,0,0,0,0,0,1,0,2},
+            {2,2,2,2,2,2,2,2,2,2,2,2,2},
         };
         public int[,] Tiles1
         {
@@ -66,10 +85,7 @@ namespace MyGame
 
         private int tileSize = 75;
 
-        public TileMap()
-        {
-
-        }
+        public int TileSize => tileSize;
 
         public void Render()
         {
@@ -88,10 +104,18 @@ namespace MyGame
                     if (tiles1[row, col] == 2)
                     {
                         Engine.Draw(tile2, row * tileSize, col * tileSize);
-
+                    }
+                    if (tiles1[row, col] == 3)
+                    {
+                        Engine.Draw(tile3, row * tileSize, col * tileSize);
                     }
                 }
             }
+        }
+
+        public void Update()
+        {
+
         }
     }
 }

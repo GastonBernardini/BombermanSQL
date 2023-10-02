@@ -24,9 +24,9 @@ namespace MyGame
 
             while (true)
             {
-                Update();
+                GameManager.Instance.Update();
 
-                Render();
+                GameManager.Instance.Render();
 
                 Sdl.SDL_Delay(20);
             }
@@ -35,12 +35,12 @@ namespace MyGame
         private static void Initialize()
         {
             Engine.Initialize();
-            player = (new Character(new Vector2(0, 0), 75, 30, "assets/player.png"));
+            player = (new Character(new Vector2(150, 150), 75, 15, "assets/player.png"));
             //tileMap = (new TileMap());
             _startTime = DateTime.Now;
         }
 
-        private static void Update()
+        public static void Update()
         {
 
             float currentTime = (float)(DateTime.Now - _startTime).TotalSeconds;
@@ -49,17 +49,13 @@ namespace MyGame
 
             player.Update();
 
-            //Console.Write(DeltaTime + Environment.NewLine);
-
-            if (Engine.KeyPress(Engine.KEY_LEFT)) {  }
-
-            if (Engine.KeyPress(Engine.KEY_RIGHT)) {  }
-
-            if (Engine.KeyPress(Engine.KEY_UP)) { }
-
-            if (Engine.KeyPress(Engine.KEY_DOWN)) {  }
-
-            if (Engine.KeyPress(Engine.KEY_ESC)) { }
+            if (bombList.Count > 0)
+            {
+                foreach (Bomb bomb in bombList)
+                {
+                    bomb.Update();
+                }
+            }
         }
 
         public static void Render()
