@@ -118,3 +118,36 @@ D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bom
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_7.png
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_8.png
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_9.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_1.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_10.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_11.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_12.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_13.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_14.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_2.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_3.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_4.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_5.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_6.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_7.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_8.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_9.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right1.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right2.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right3.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down1.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down2.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down3.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Idle\B_Idle0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left1.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left2.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left3.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up1.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up2.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up3.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up4.png
