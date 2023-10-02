@@ -19,6 +19,8 @@ namespace MyGame
         private float explosionTimeElapsed = 0;
         private Animation currentAnimation;
         private Animation bombAnimation;
+        int tilex;
+        int tiley;
 
         public Bomb(Vector2 pos, float timer, string image)
         {
@@ -52,6 +54,15 @@ namespace MyGame
         public void Update()
         {
             currentAnimation.Update();
+
+            tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
+            tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
+
+            if (!exploded)
+            {
+                TileMap.Instance.Tiles1[tilex, tiley] = 4;
+            }
+
             if (currentAnimation.CurrentFrameIndex == currentAnimation.FramesCount - 1)
             {
                 explosion();
@@ -60,8 +71,6 @@ namespace MyGame
 
         private void explosion()
         {
-            int tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
-            int tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
             exploded = true;
             explosionTimeElapsed++;
             if (explosionTimeElapsed < explosionTimer)
