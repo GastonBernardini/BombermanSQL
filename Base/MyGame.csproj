@@ -50,7 +50,6 @@
     <Compile Include="Animation.cs" />
     <Compile Include="Bomb.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="Colitions.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="GameManager.cs" />
@@ -64,7 +63,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="assets\Sound\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="assets\bomba.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -181,6 +182,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\Player\B_Up\B_Up4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\BackgroundTheme.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\tile0.png">

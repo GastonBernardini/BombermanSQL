@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Media;
 using System.Threading;
 using Tao.Sdl;
 
@@ -21,6 +22,9 @@ namespace MyGame
         static void Main(string[] args)
         {
             Initialize();
+            SoundPlayer musicplayer = new SoundPlayer("assets/BackgroundTheme.wav");
+
+            musicplayer.Play();
 
             while (true)
             {
