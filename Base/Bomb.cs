@@ -13,25 +13,24 @@ namespace MyGame
         public Transform Transform => transform;
         private IntPtr image;
         private bool exploded = false;
-        private float timeElapsed;
-        private float timer;
+        //private float timeElapsed;
+        //private float timer;
         private float explosionTimer = 12;
         private float explosionTimeElapsed = 0;
         private Animation currentAnimation;
         private Animation bombAnimation;
-        int tilex;
-        int tiley;
+        private int tilex;
+        private int tiley;
 
-        public Bomb(Vector2 pos, float timer, string image)
+        public Bomb(Vector2 pos, string image)
         {
             transform = new Transform(pos, new Vector2(100, 100));
-            this.timer = timer;
             this.image = Engine.LoadImage(image);
-            CreateAnimations();
+            createAnimations();
             currentAnimation = bombAnimation;
         }
 
-        private void CreateAnimations()
+        private void createAnimations()
         {
             List<IntPtr> bombTextures = new List<IntPtr>();
             for (int i = 0; i < 15; i++)

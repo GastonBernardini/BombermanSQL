@@ -15,18 +15,18 @@ namespace MyGame
         private IntPtr image;
         private int tilex;
         private int tiley;
+        public int TileX => tilex;
+        public int TileY => tiley;
         private bool isCollidingRight = false;
         private bool isCollidingLeft = false;
         private bool isCollidingUp = false;
         private bool isCollidingDown = false;
-        public int TileX => tilex;
-        public int TileY => tiley;
         private Animation currentAnimation;
+        private Animation idleAnimation;
         private Animation rightAnimation;
         private Animation leftAnimation;
         private Animation upAnimation;
         private Animation downAnimation;
-        private Animation idleAnimation;
 
 
         public Character(Vector2 pos, float speed, float movementTimer, string image)
@@ -35,7 +35,7 @@ namespace MyGame
             this.movementTimer = movementTimer;
             this.speed = speed;
             this.image = Engine.LoadImage(image);
-            CreateAnimations();
+            createAnimations();
             currentAnimation = idleAnimation;
         }
 
@@ -43,8 +43,8 @@ namespace MyGame
         {
             AnimationCharacter();
             tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
-             tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
-             IsColliding();           
+            tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
+            isColliding();           
             if (currentTimer == movementTimer)
             {
                 if (Engine.KeyPress(Engine.KEY_LEFT)&& !isCollidingLeft)
@@ -77,7 +77,7 @@ namespace MyGame
 
             if (Engine.KeyPress(Engine.KEY_ESP)) 
             {
-                Program.bombList.Add(new Bomb(transform.Position, 100, "assets/bomba.png"));
+                Program.bombList.Add(new Bomb(transform.Position, "assets/bomba.png"));
             };
 
 
@@ -91,7 +91,7 @@ namespace MyGame
         {
             Engine.Draw(currentAnimation.CurrentFrame, transform.Position.x, transform.Position.y);
         }
-        private void IsColliding()
+        private void isColliding()
         {
             if (TileMap.Instance.Tiles1[tilex +1,tiley] != 0)
             {
@@ -130,7 +130,8 @@ namespace MyGame
                 isCollidingUp = false;
             }
         }
-        private void CreateAnimations()
+
+        private void createAnimations()
         {
             List<IntPtr> PlayerRightTextures = new List<IntPtr>();
             for (int i = 0; i < 4; i++)
