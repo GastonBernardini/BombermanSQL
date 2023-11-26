@@ -7,30 +7,23 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
-    public class Bomb
+    public class Bomb : GameObject
     {
-        private Transform transform;
-        public Transform Transform => transform;
         private IntPtr image;
         private bool exploded = false;
-        //private float timeElapsed;
-        //private float timer;
         private float explosionTimer = 12;
         private float explosionTimeElapsed = 0;
-        private Animation currentAnimation;
         private Animation bombAnimation;
         private int tilex;
         private int tiley;
 
-        public Bomb(Vector2 pos, string image)
+        public Bomb(Vector2 pos, string image) : base(pos)
         {
-            transform = new Transform(pos, new Vector2(100, 100));
-            this.image = Engine.LoadImage(image);
-            createAnimations();
+            //CreateAnimations();
             currentAnimation = bombAnimation;
         }
 
-        private void createAnimations()
+        protected override void CreateAnimations()
         {
             List<IntPtr> bombTextures = new List<IntPtr>();
             for (int i = 0; i < 15; i++)
@@ -41,16 +34,15 @@ namespace MyGame
             bombAnimation = new Animation("Bomb", bombTextures, 0.2f, false);
         }
 
-        public void Render()
+        public override void Render()
         {
             if (!exploded)
             {
                 Engine.Draw(currentAnimation.CurrentFrame, transform.Position.x, transform.Position.y);
             }
-
         }
 
-        public void Update()
+        public override void Update()
         {
             currentAnimation.Update();
 

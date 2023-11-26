@@ -5,14 +5,13 @@ using System.Windows;
 
 namespace MyGame
 {
-    public class Character
+    public class Character : GameObject
     {
-        private Transform transform;
-        public Transform Transform => transform;
+        //private Transform transform;
+        //public Transform Transform => transform;
         private float speed;
         private float movementTimer;
         private float currentTimer;
-        private IntPtr image;
         private int tilex;
         private int tiley;
         public int TileX => tilex;
@@ -21,25 +20,24 @@ namespace MyGame
         private bool isCollidingLeft = false;
         private bool isCollidingUp = false;
         private bool isCollidingDown = false;
-        private Animation currentAnimation;
+        //private Animation currentAnimation;
         private Animation idleAnimation;
         private Animation rightAnimation;
         private Animation leftAnimation;
         private Animation upAnimation;
         private Animation downAnimation;
 
-
-        public Character(Vector2 pos, float speed, float movementTimer, string image)
+        public Character(Vector2 pos, float speed, float movementTimer) :base(pos)
         {
-            transform = new Transform(pos, new Vector2(100, 100));
+            //transform = new Transform(pos, new Vector2(100, 100), new Vector2(0, 0));
             this.movementTimer = movementTimer;
             this.speed = speed;
-            this.image = Engine.LoadImage(image);
-            createAnimations();
+            //this.image = Engine.LoadImage(image);
+            //CreateAnimations();
             currentAnimation = idleAnimation;
         }
 
-        public void Update()
+        public override void Update()
         {
             AnimationCharacter();
             tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
@@ -87,10 +85,11 @@ namespace MyGame
             }
         }
 
-        public void Render()
+        public override void Render()
         {
             Engine.Draw(currentAnimation.CurrentFrame, transform.Position.x, transform.Position.y);
         }
+
         private void isColliding()
         {
             if (TileMap.Instance.Tiles1[tilex +1,tiley] != 0)
@@ -131,7 +130,7 @@ namespace MyGame
             }
         }
 
-        private void createAnimations()
+        protected override void CreateAnimations()
         {
             List<IntPtr> PlayerRightTextures = new List<IntPtr>();
             for (int i = 0; i < 4; i++)

@@ -10,13 +10,16 @@ namespace MyGame
     {
         private Vector2 position;
         private Vector2 scale;
+        private Vector2 rotation;
         public Vector2 Position => position;
         public Vector2 Scale => scale;
+        public Vector2 Rotation => rotation;
 
-        public Transform(Vector2 position, Vector2 scale)
+        public Transform(Vector2 position, Vector2 scale, Vector2 rotation)
         {
             this.position = position;
             this.scale = scale;
+            this.rotation = rotation;
         }
 
         public void Translate(Vector2 direction, float speed)

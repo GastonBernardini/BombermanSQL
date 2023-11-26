@@ -39,7 +39,7 @@ namespace MyGame
         private static void Initialize()
         {
             Engine.Initialize();
-            player = (new Character(new Vector2(75, 75), 75, 15, "assets/player.png"));
+            player = (new Character(new Vector2(75, 75), 75, 15));
             //tileMap = (new TileMap());
             _startTime = DateTime.Now;
         }
