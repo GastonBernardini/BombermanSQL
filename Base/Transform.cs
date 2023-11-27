@@ -27,6 +27,17 @@ namespace MyGame
             position.x += direction.x * speed /* * Program.DeltaTime*/;
             position.y += direction.y * speed /* * Program.DeltaTime*/;
         }
+        public void SetNewPosition(Vector2 newPos)
+        {
+            position.x = newPos.x;
+            position.y = newPos.y;
+        }
 
+        public Vector2 PositionCenter()
+        {
+
+            return new Vector2(position.x + scale.x / 2, position.y + scale.y / 2);
+
+        }
     }
 }

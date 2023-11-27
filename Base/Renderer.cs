@@ -12,12 +12,12 @@ namespace MyGame
 
         public Renderer(Animation anim)
         {
-
             _anim = anim;
         }
 
-        public void Render(Transform transform)
+        public void Render(Transform transform, Animation anim)
         {
+            _anim = anim;
             Engine.Draw(_anim.CurrentFrame, transform.Position.x, transform.Position.y);
         }
     }

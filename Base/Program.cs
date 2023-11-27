@@ -16,8 +16,7 @@ namespace MyGame
         private static float _lastTimeFrame;
         public static float DeltaTime;
         public static Character player;
-        public static List<Bomb> bombList = new List<Bomb>();
-        //public static TileMap tileMap;
+        public static List<GameObject> gameObjectList = new List<GameObject>();
 
         static void Main(string[] args)
         {
@@ -54,11 +53,11 @@ namespace MyGame
             player.Update();
             TileMap.Instance.Update();
 
-            if (bombList.Count > 0)
+            if (gameObjectList.Count > 0)
             {
-                foreach (Bomb bomb in bombList)
+                foreach (GameObject gameObject in gameObjectList.ToArray())
                 {
-                    bomb.Update();
+                    gameObject.Update();
                 }
             }
         }
@@ -68,12 +67,12 @@ namespace MyGame
         {
             Engine.Clear();
             Engine.Draw(image, 0, 0);
-            TileMap.Instance.Render();           
-            if (bombList.Count > 0)
+            TileMap.Instance.Render();
+            if (gameObjectList.Count > 0)
             {
-                foreach (Bomb bomb in bombList)
+                foreach (GameObject gameObject in gameObjectList.ToArray())
                 {
-                    bomb.Render();
+                    gameObject.Render();
                 }
             }
             player.Render();

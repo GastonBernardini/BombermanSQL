@@ -9,15 +9,18 @@ namespace MyGame
 {
     public class Bomb : GameObject
     {
-        private IntPtr image;
+        //private IntPtr image;
         private bool exploded = false;
+        private bool explosionFinished = false;
         private float explosionTimer = 12;
         private float explosionTimeElapsed = 0;
         private Animation bombAnimation;
         private int tilex;
         private int tiley;
+        public event Action<Bomb> OnExplode;
+        
 
-        public Bomb(Vector2 pos, string image) : base(pos)
+        public Bomb(Vector2 pos) : base(pos)
         {
             //CreateAnimations();
             currentAnimation = bombAnimation;
@@ -38,7 +41,7 @@ namespace MyGame
         {
             if (!exploded)
             {
-                Engine.Draw(currentAnimation.CurrentFrame, transform.Position.x, transform.Position.y);
+                renderer.Render(transform, currentAnimation);
             }
         }
 
@@ -57,6 +60,13 @@ namespace MyGame
             if (currentAnimation.CurrentFrameIndex == currentAnimation.FramesCount - 1)
             {
                 explosion();
+            }
+
+            if (explosionFinished)
+            {
+                OnExplode.Invoke(this);
+                Program.gameObjectList.Remove(this);
+                //Program.player.bombPool.PrintBombs();
             }
         }
 
@@ -111,9 +121,18 @@ namespace MyGame
                 if (TileMap.Instance.Tiles1[tilex, tiley - 1] != 2)
                 {
                     TileMap.Instance.Tiles1[tilex, tiley - 1] = 0;
-
                 }
+
+                explosionFinished = true;
             }
+        }
+
+        public void ResetBomb()
+        {
+            exploded = false;
+            explosionFinished = false;
+            explosionTimeElapsed = 0;
+            currentAnimation.ResetAnimation();
         }
     }
 }

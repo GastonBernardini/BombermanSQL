@@ -2,39 +2,32 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
+using System.Xml;
 
 namespace MyGame
 {
     public class Character : GameObject
     {
-        //private Transform transform;
-        //public Transform Transform => transform;
-        private float speed;
-        private float movementTimer;
-        private float currentTimer;
-        private int tilex;
-        private int tiley;
-        public int TileX => tilex;
-        public int TileY => tiley;
-        private bool isCollidingRight = false;
-        private bool isCollidingLeft = false;
-        private bool isCollidingUp = false;
-        private bool isCollidingDown = false;
-        //private Animation currentAnimation;
         private Animation idleAnimation;
         private Animation rightAnimation;
         private Animation leftAnimation;
         private Animation upAnimation;
         private Animation downAnimation;
 
+        private int tilex;
+        private int tiley;
+        public int TileX => tilex;
+        public int TileY => tiley;
+
+        public StaticPool bombPool;
+
+        private CharacterMovement characterMovement;
+
         public Character(Vector2 pos, float speed, float movementTimer) :base(pos)
         {
-            //transform = new Transform(pos, new Vector2(100, 100), new Vector2(0, 0));
-            this.movementTimer = movementTimer;
-            this.speed = speed;
-            //this.image = Engine.LoadImage(image);
-            //CreateAnimations();
             currentAnimation = idleAnimation;
+            characterMovement = new CharacterMovement(this, movementTimer, speed);
+            bombPool = new StaticPool(1);
         }
 
         public override void Update()
@@ -42,42 +35,19 @@ namespace MyGame
             AnimationCharacter();
             tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
             tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
-            isColliding();           
-            if (currentTimer == movementTimer)
-            {
-                if (Engine.KeyPress(Engine.KEY_LEFT)&& !isCollidingLeft)
-                {
-                    transform.Translate(new Vector2(-1, 0), speed);
-                    currentTimer = 0;
-                }
-                if (Engine.KeyPress(Engine.KEY_RIGHT)&& !isCollidingRight)
-                {
-                    transform.Translate(new Vector2(1, 0), speed);
-                    currentTimer = 0;
-                }
-                if (Engine.KeyPress(Engine.KEY_UP)&& !isCollidingUp)
-                {
-                    transform.Translate(new Vector2(0, -1), speed);
-                    currentTimer = 0;
-                }
-                if (Engine.KeyPress(Engine.KEY_DOWN)&& !isCollidingDown)
-                {
-                    transform.Translate(new Vector2(0, 1), speed);
-                    currentTimer = 0;
-                }
-                
-            };
-
-            if (currentTimer < movementTimer)
-            {
-                currentTimer++;
-            };
+            characterMovement.Update();
 
             if (Engine.KeyPress(Engine.KEY_ESP)) 
             {
-                Program.bombList.Add(new Bomb(transform.Position, "assets/bomba.png"));
+                
+                Bomb bomb = bombPool.GetBomb();
+                if (bomb != null) {
+                    bomb.ResetBomb();
+                    Program.gameObjectList.Add(bomb);
+                    bomb.Transform.SetNewPosition(new Vector2(transform.Position.x, transform.Position.y));
+                }
+                bombPool.PrintBombs();
             };
-
 
             if (TileMap.Instance.Tiles1[tilex,tiley] == 3)
             {
@@ -87,48 +57,10 @@ namespace MyGame
 
         public override void Render()
         {
-            Engine.Draw(currentAnimation.CurrentFrame, transform.Position.x, transform.Position.y);
+            renderer.Render(transform, currentAnimation);
         }
 
-        private void isColliding()
-        {
-            if (TileMap.Instance.Tiles1[tilex +1,tiley] != 0)
-            {
-                isCollidingRight = true;
-                //Console.WriteLine("colisiona derecha");
-            }
-            else
-            {
-                isCollidingRight = false;
-            }
-            if (TileMap.Instance.Tiles1[tilex - 1, tiley] != 0)
-            {
-                isCollidingLeft = true;
-                //Console.WriteLine("colisiona izquierda");
-            }
-            else
-            {
-                isCollidingLeft = false;
-            }
-            if (TileMap.Instance.Tiles1[tilex , tiley +1 ] != 0)
-            {
-                isCollidingDown = true;
-                //Console.WriteLine("colisiona abajo");
-            }
-            else
-            {
-                isCollidingDown = false;
-            }
-            if (TileMap.Instance.Tiles1[tilex , tiley - 1] != 0)
-            {
-                isCollidingUp = true;
-                //Console.WriteLine("colisiona arriba");
-            }
-            else
-            {
-                isCollidingUp = false;
-            }
-        }
+        
 
         protected override void CreateAnimations()
         {
@@ -172,24 +104,25 @@ namespace MyGame
             }
             idleAnimation = new Animation("WalkLeft", PlayerIdleTextures, 0.2f, true);
         }
+
         private void AnimationCharacter()
         {
             currentAnimation.Update();
             currentAnimation = idleAnimation;
             
-            if (Engine.KeyPress(Engine.KEY_LEFT) && !isCollidingLeft)   
+            if (Engine.KeyPress(Engine.KEY_LEFT) && !characterMovement.IsCollidingLeft)   
             {
                 currentAnimation = leftAnimation;
             }
-            if (Engine.KeyPress(Engine.KEY_RIGHT) && !isCollidingRight)
+            if (Engine.KeyPress(Engine.KEY_RIGHT) && !characterMovement.IsCollidingRight)
             {
                 currentAnimation = rightAnimation;
             }
-            if (Engine.KeyPress(Engine.KEY_UP) && !isCollidingUp)
+            if (Engine.KeyPress(Engine.KEY_UP) && !characterMovement.IsCollidingUp)
             {
                 currentAnimation = upAnimation;
             }
-            if (Engine.KeyPress(Engine.KEY_DOWN) && !isCollidingDown)
+            if (Engine.KeyPress(Engine.KEY_DOWN) && !characterMovement.IsCollidingDown)
             {
                 currentAnimation = downAnimation;
             }

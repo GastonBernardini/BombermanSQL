@@ -50,6 +50,8 @@
     <Compile Include="Animation.cs" />
     <Compile Include="Bomb.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="CharacterMovement.cs" />
+    <Compile Include="Collider.cs" />
     <Compile Include="Font.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="GameManager.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderer.cs" />
     <Compile Include="Sound.cs" />
+    <Compile Include="StaticPool.cs" />
     <Compile Include="TileMap.cs" />
     <Compile Include="Transform.cs" />
     <Compile Include="Vector2.cs" />
