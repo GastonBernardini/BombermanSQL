@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Animation.cs" />
     <Compile Include="Bomb.cs" />
+    <Compile Include="BombExplosion.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="CharacterMovement.cs" />
     <Compile Include="Collider.cs" />

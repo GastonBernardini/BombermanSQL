@@ -10,20 +10,20 @@ namespace MyGame
     public class Bomb : GameObject, IPoolable
     {
         //private IntPtr image;
-        private bool exploded = false;
-        private bool explosionFinished = false;
-        private float explosionTimer = 12;
-        private float explosionTimeElapsed = 0;
         private Animation bombAnimation;
         private int tilex;
         private int tiley;
+        public int Tilex => tilex;
+        public int Tiley => tiley;
+
         public event Action<IPoolable> OnDispose;
+        private BombExplosion bombExplosion;
         
 
         public Bomb(Vector2 pos) : base(pos)
         {
-            //CreateAnimations();
             currentAnimation = bombAnimation;
+            bombExplosion = new BombExplosion(this);
         }
 
         protected override void CreateAnimations()
@@ -39,7 +39,7 @@ namespace MyGame
 
         public override void Render()
         {
-            if (!exploded)
+            if (!bombExplosion.Exploded)
             {
                 renderer.Render(transform, currentAnimation);
             }
@@ -52,20 +52,19 @@ namespace MyGame
             tilex = (int)Transform.Position.x / TileMap.Instance.TileSize;
             tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
 
-            if (!exploded)
+            if (!bombExplosion.Exploded)
             {
                 TileMap.Instance.Tiles1[tilex, tiley] = 4;
             }
 
             if (currentAnimation.CurrentFrameIndex == currentAnimation.FramesCount - 1)
             {
-                explosion();
+                bombExplosion.explosion();
             }
 
-            if (explosionFinished)
+            if (bombExplosion.ExplosionFinished)
             {
                 Dispose();
-                //Program.player.bombPool.PrintBombs();
             }
         }
 
@@ -75,68 +74,9 @@ namespace MyGame
             GameManager.Instance.levelController.gameObjectList.Remove(this);
         }
 
-        private void explosion()
-        {
-            exploded = true;
-            explosionTimeElapsed++;
-            if (explosionTimeElapsed < explosionTimer)
-            {
-                TileMap.Instance.Tiles1[tilex, tiley] = 3;
-
-                if (TileMap.Instance.Tiles1[tilex + 1, tiley] != 2)
-                {
-                    TileMap.Instance.Tiles1[tilex + 1, tiley] = 3;
-                }
-
-                if (TileMap.Instance.Tiles1[tilex - 1, tiley] != 2)
-                {
-                    TileMap.Instance.Tiles1[tilex - 1, tiley] = 3;
-                }
-
-                if (TileMap.Instance.Tiles1[tilex, tiley + 1] != 2)
-                {
-                    TileMap.Instance.Tiles1[tilex, tiley + 1] = 3;
-                }
-
-                if (TileMap.Instance.Tiles1[tilex, tiley - 1] != 2)
-                {
-                    TileMap.Instance.Tiles1[tilex, tiley - 1] = 3;
-
-                }
-            }
-            else if (explosionTimeElapsed > explosionTimer) { 
-                TileMap.Instance.Tiles1[tilex, tiley] = 0;
-
-
-                if (TileMap.Instance.Tiles1[tilex + 1, tiley] != 2)
-                {
-                    TileMap.Instance.Tiles1[tilex + 1, tiley] = 0;
-                }
-
-                if (TileMap.Instance.Tiles1[tilex - 1, tiley] != 2)
-                {
-                    TileMap.Instance.Tiles1[tilex - 1, tiley] = 0;
-                }
-
-                if (TileMap.Instance.Tiles1[tilex, tiley + 1] != 2)
-                {
-                    TileMap.Instance.Tiles1[tilex, tiley + 1] = 0;
-                }
-
-                if (TileMap.Instance.Tiles1[tilex, tiley - 1] != 2)
-                {
-                    TileMap.Instance.Tiles1[tilex, tiley - 1] = 0;
-                }
-
-                explosionFinished = true;
-            }
-        }
-
         public void ResetBomb()
         {
-            exploded = false;
-            explosionFinished = false;
-            explosionTimeElapsed = 0;
+            bombExplosion.ResetBomb();
             currentAnimation.ResetAnimation();
         }
     }
