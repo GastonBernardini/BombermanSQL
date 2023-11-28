@@ -42,7 +42,7 @@ namespace MyGame
 
         public void RecycleObj(IPoolable obj)
         {
-            objAvailable.Remove((T)obj);
+            objInUse.Remove((T)obj);
             objAvailable.Add((T)obj);
         }
 

@@ -170,3 +170,4 @@ D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up3.png
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up4.png
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\BackgroundTheme.wav
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\BackgroundTheme.wav
