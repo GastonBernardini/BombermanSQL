@@ -13,6 +13,8 @@ namespace MyGame
         private Animation leftAnimation;
         private Animation upAnimation;
         private Animation downAnimation;
+        private int id;
+        public int Id => id;
 
         private int tilex;
         private int tiley;
@@ -24,14 +26,14 @@ namespace MyGame
         private CharacterMovement characterMovement;
         private CharacterAnimations charAnim;
 
-        public Character(Vector2 pos, float speed, float movementTimer) :base(pos)
+        public Character(Vector2 pos, float speed, float movementTimer, int id) : base(pos)
         {
-            charAnim = new CharacterAnimations();
+            charAnim = new CharacterAnimations(this);
             CreateAnimations();
             currentAnimation = charAnim.idleAnimation;
             characterMovement = new CharacterMovement(this, movementTimer, speed);
             bombPool = new StaticPool<Bomb>(1, new Bomb(Vector2.Zero));
-            
+            this.id = id;
         }
 
         public override void Update()
@@ -41,22 +43,33 @@ namespace MyGame
             tiley = (int)Transform.Position.y / TileMap.Instance.TileSize;
             characterMovement.Update();
 
-            if (Engine.KeyPress(Engine.KEY_ESP)) 
+            if (id == 1)
             {
-                
-                Bomb bomb = bombPool.GetObj();
-                if (bomb != null) {
-                    bomb.ResetBomb();
-                    GameManager.Instance.levelController.gameObjectList.Add(bomb);
-                    bomb.Transform.SetNewPosition(new Vector2(transform.Position.x, transform.Position.y));
-                }
-                bombPool.PrintObj();
-            };
+                if (Engine.KeyPress(Engine.KEY_ESP))
+                {
 
-            if (TileMap.Instance.Tiles1[tilex,tiley] == 3)
-            {
-                GameManager.Instance.ChangeGameStatus(3);
+                    Bomb bomb = bombPool.GetObj();
+                    if (bomb != null)
+                    {
+                        bomb.ResetBomb();
+                        GameManager.Instance.levelController.gameObjectList.Add(bomb);
+                        bomb.Transform.SetNewPosition(new Vector2(transform.Position.x, transform.Position.y));
+                    }
+                    bombPool.PrintObj();
+                }
+
+                if (TileMap.Instance.Tiles1[tilex, tiley] == 3)
+                {
+                    GameManager.Instance.ChangeGameStatus(3);
+                }
             }
+
+            if (id == 2)
+            {
+
+            }
+
+
         }
 
         public override void Render()

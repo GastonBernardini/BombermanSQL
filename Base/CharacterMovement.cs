@@ -39,8 +39,9 @@ namespace MyGame
         public void Update()
         {
             isColliding();
-            
-            
+
+            if (player.Id == 1)
+            {
                 if (currentTimer == movementTimer)
                 {
                     if (Engine.KeyPress(Engine.KEY_LEFT) && !isCollidingLeft)
@@ -70,7 +71,12 @@ namespace MyGame
                         pickupObject();
                     }
                 };
-           
+            }
+
+            if (player.Id == 2)
+            {
+
+            }
 
             if (currentTimer < movementTimer)
             {

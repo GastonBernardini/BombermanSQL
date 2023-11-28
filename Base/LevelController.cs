@@ -18,7 +18,7 @@ namespace MyGame
 
         public void Initialization()
         {
-            player = (new Character(new Vector2(75, 75), 75, 15));
+            player = (new Character(new Vector2(75, 75), 75, 15, 1));
             _startTime = DateTime.Now;
         }
 

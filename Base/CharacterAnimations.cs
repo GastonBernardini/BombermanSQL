@@ -12,13 +12,16 @@ namespace MyGame
         public Animation leftAnimation;
         public Animation upAnimation;
         public Animation downAnimation;
-        public CharacterAnimations()
+        private Character player;
+        public CharacterAnimations(Character player)
         {
-
+            this.player = player;
         }
 
         public void CreateAnimations()
         {
+            if (player.Id == 1)
+            {
                 List<IntPtr> PlayerRightTextures = new List<IntPtr>();
                 for (int i = 0; i < 4; i++)
                 {
@@ -58,6 +61,13 @@ namespace MyGame
                     PlayerIdleTextures.Add(frame);
                 }
                 idleAnimation = new Animation("WalkLeft", PlayerIdleTextures, 0.2f, true);
+
+            }
+
+            if (player.Id == 2)
+            {
+
+            }
         }
     }
 }
