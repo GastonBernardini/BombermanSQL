@@ -20,7 +20,7 @@ namespace MyGame
             transform = new Transform(pos, new Vector2(100, 100), new Vector2(0, 0));
 
             //this.speed = speed;
-            CreateAnimations();
+            //CreateAnimations();
 
             renderer = new Renderer(currentAnimation);
         }

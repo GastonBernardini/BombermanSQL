@@ -12,6 +12,11 @@ namespace MyGame
         private float movementTimer;
         private float currentTimer;
         private float speed;
+        public float MovementTimer 
+        {
+            get { return movementTimer; }
+            set { movementTimer = value; }
+        }
 
         private bool isCollidingRight = false;
         private bool isCollidingLeft = false;
@@ -27,42 +32,62 @@ namespace MyGame
         {
             this.player = player;
             this.movementTimer = movementTimer;
-                this.speed = speed;
+            this.speed = speed;
         }
 
 
         public void Update()
         {
             isColliding();
-            if (currentTimer == movementTimer)
-            {
-                if (Engine.KeyPress(Engine.KEY_LEFT) && !isCollidingLeft)
+            
+            
+                if (currentTimer == movementTimer)
                 {
-                    player.Transform.Translate(new Vector2(-1, 0), speed);
-                    currentTimer = 0;
-                }
-                if (Engine.KeyPress(Engine.KEY_RIGHT) && !isCollidingRight)
-                {
-                    player.Transform.Translate(new Vector2(1, 0), speed);
-                    currentTimer = 0;
-                }
-                if (Engine.KeyPress(Engine.KEY_UP) && !isCollidingUp)
-                {
-                    player.Transform.Translate(new Vector2(0, -1), speed);
-                    currentTimer = 0;
-                }
-                if (Engine.KeyPress(Engine.KEY_DOWN) && !isCollidingDown)
-                {
-                    player.Transform.Translate(new Vector2(0, 1), speed);
-                    currentTimer = 0;
-                }
-            };
+                    if (Engine.KeyPress(Engine.KEY_LEFT) && !isCollidingLeft)
+                    {
+                        player.Transform.Translate(new Vector2(-1, 0), speed);
+                        currentTimer = 0;
+                        pickupObject();
+
+
+                    }
+                    if (Engine.KeyPress(Engine.KEY_RIGHT) && !isCollidingRight)
+                    {
+                        player.Transform.Translate(new Vector2(1, 0), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                    if (Engine.KeyPress(Engine.KEY_UP) && !isCollidingUp)
+                    {
+                        player.Transform.Translate(new Vector2(0, -1), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                    if (Engine.KeyPress(Engine.KEY_DOWN) && !isCollidingDown)
+                    {
+                        player.Transform.Translate(new Vector2(0, 1), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                };
+           
 
             if (currentTimer < movementTimer)
             {
                 currentTimer++;
             };
 
+        }
+
+        private void pickupObject()
+        {
+            foreach (GameObject gameObject in GameManager.Instance.levelController.gameObjectList)
+            {
+                if (gameObject is IPickupeable objPickup && gameObject.Transform.Position == player.Transform.Position)
+                {
+                    objPickup.Pickup();
+                }
+            }
         }
 
         private void isColliding()

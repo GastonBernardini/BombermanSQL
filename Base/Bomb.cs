@@ -22,6 +22,7 @@ namespace MyGame
 
         public Bomb(Vector2 pos) : base(pos)
         {
+            CreateAnimations();
             currentAnimation = bombAnimation;
             bombExplosion = new BombExplosion(this);
         }

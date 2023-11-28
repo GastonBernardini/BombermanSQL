@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    internal class MoreBombs : GameObject,  IsPickupeable
+    internal class MoreBombs : GameObject,  IPickupeable
     {
         private Animation morebombsAnimation;
         public MoreBombs (Vector2 pos) : base(pos)

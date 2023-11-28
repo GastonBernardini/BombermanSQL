@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    internal class SpeedUp : GameObject, IsPickupeable
+    internal class SpeedUp : GameObject, IPickupeable
     {
         private Animation speedAnimation;
         public SpeedUp(Vector2 pos) : base(pos)
