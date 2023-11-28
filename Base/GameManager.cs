@@ -55,10 +55,17 @@ namespace MyGame
                     levelController.Update();
                     break;
                 case 2:
+                    if (Engine.KeyPress(Engine.KEY_ESC))
+                    {
+                        gameStatus = 0;
+                    }
                     //  Program.Update();
                     break;
                 case 3:
-
+                    if (Engine.KeyPress(Engine.KEY_ESC))
+                    {
+                        gameStatus = 0;
+                    }
                     //   Program.Update();
                     break;
             }
