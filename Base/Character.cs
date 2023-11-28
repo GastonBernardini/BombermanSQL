@@ -19,7 +19,7 @@ namespace MyGame
         public int TileX => tilex;
         public int TileY => tiley;
 
-        public StaticPool bombPool;
+        public StaticPool<Bomb> bombPool;
 
         private CharacterMovement characterMovement;
 
@@ -27,7 +27,7 @@ namespace MyGame
         {
             currentAnimation = idleAnimation;
             characterMovement = new CharacterMovement(this, movementTimer, speed);
-            bombPool = new StaticPool(1);
+            bombPool = new StaticPool<Bomb>(1, new Bomb(Vector2.Zero));
         }
 
         public override void Update()
@@ -40,13 +40,13 @@ namespace MyGame
             if (Engine.KeyPress(Engine.KEY_ESP)) 
             {
                 
-                Bomb bomb = bombPool.GetBomb();
+                Bomb bomb = bombPool.GetObj();
                 if (bomb != null) {
                     bomb.ResetBomb();
                     Program.gameObjectList.Add(bomb);
                     bomb.Transform.SetNewPosition(new Vector2(transform.Position.x, transform.Position.y));
                 }
-                bombPool.PrintBombs();
+                bombPool.PrintObj();
             };
 
             if (TileMap.Instance.Tiles1[tilex,tiley] == 3)

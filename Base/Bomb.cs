@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
-    public class Bomb : GameObject
+    public class Bomb : GameObject, IPoolable
     {
         //private IntPtr image;
         private bool exploded = false;
@@ -17,7 +17,7 @@ namespace MyGame
         private Animation bombAnimation;
         private int tilex;
         private int tiley;
-        public event Action<Bomb> OnExplode;
+        public event Action<IPoolable> OnDispose;
         
 
         public Bomb(Vector2 pos) : base(pos)
@@ -64,10 +64,15 @@ namespace MyGame
 
             if (explosionFinished)
             {
-                OnExplode.Invoke(this);
-                Program.gameObjectList.Remove(this);
+                Dispose();
                 //Program.player.bombPool.PrintBombs();
             }
+        }
+
+        public void Dispose()
+        {
+            OnDispose.Invoke(this);
+            Program.gameObjectList.Remove(this);
         }
 
         private void explosion()

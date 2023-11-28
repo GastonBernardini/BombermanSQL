@@ -6,53 +6,50 @@ using System.Xml;
 
 namespace MyGame
 {
-    public class StaticPool
+    public class StaticPool<T> where T : IPoolable
     {
-        private List<Bomb> bombsInUse = new List<Bomb>();
-        private List<Bomb> bombsAvailable = new List<Bomb>();
+        private List<T> objInUse = new List<T>();
+        private List<T> objAvailable = new List<T>();
 
-        public StaticPool(int cantidad) 
-        { 
+        public StaticPool(int cantidad, T obj) 
+        {
             for (int i = 0; i < cantidad; i++)
             {
-                Bomb newBomb = new Bomb(new Vector2(0, 0));
-                bombsAvailable.Add(newBomb);
-                newBomb.OnExplode += RecycleBomb;
-
+                objAvailable.Add(obj);
+                obj.OnDispose += RecycleObj;
             }
+
         }
 
-        public Bomb GetBomb()
+        public T GetObj()
         {
-            Bomb bomb = null;
+            T obj = default(T);
 
-            if(bombsAvailable.Count > 0)
+            if(objAvailable.Count > 0)
             {
-                bomb = bombsAvailable[0];
-                bombsAvailable.Remove(bomb);
-                bombsInUse.Add(bomb);
+                obj = objAvailable[0];
+                objAvailable.Remove(obj);
+                objInUse.Add(obj);
             }
-
-            return bomb;
+            return obj;
         }
 
-        public void AddBombSlot() 
+        public void AddSlot(T obj) 
         {
-            Bomb newBomb = new Bomb(new Vector2(0, 0));
-            bombsAvailable.Add(newBomb);
-            newBomb.OnExplode += RecycleBomb;
+            objAvailable.Add(obj);
+            obj.OnDispose += RecycleObj;
         }
 
-        public void RecycleBomb(Bomb bomb)
+        public void RecycleObj(IPoolable obj)
         {
-            bombsInUse.Remove(bomb);
-            bombsAvailable.Add(bomb);
+            objAvailable.Remove((T)obj);
+            objAvailable.Add((T)obj);
         }
 
-        public void PrintBombs()
+        public void PrintObj()
         {
-            Engine.Debug("Libres: " + bombsAvailable.Count);
-            Engine.Debug("En uso" + bombsInUse.Count);
+            Engine.Debug("Libres: " + objAvailable.Count);
+            Engine.Debug("En uso" + objInUse.Count);
         }
     }
 }
