@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    internal interface IPickupeable
+    public interface IPickupeable
     {
         void Pickup();
     }

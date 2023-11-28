@@ -50,8 +50,6 @@ namespace MyGame
                         player.Transform.Translate(new Vector2(-1, 0), speed);
                         currentTimer = 0;
                         pickupObject();
-
-
                     }
                     if (Engine.KeyPress(Engine.KEY_RIGHT) && !isCollidingRight)
                     {

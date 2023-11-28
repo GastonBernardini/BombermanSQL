@@ -7,13 +7,12 @@ namespace MyGame
 {
     public class CharacterAnimations
     {
+        private Character player;
         public Animation idleAnimation;
         public Animation rightAnimation;
         public Animation leftAnimation;
         public Animation upAnimation;
         public Animation downAnimation;
-        private Character player;
-        
 
         public CharacterAnimations(Character player)
         {
