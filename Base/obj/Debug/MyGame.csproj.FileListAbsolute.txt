@@ -171,5 +171,12 @@ D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up4.png
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\BackgroundTheme.wav
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\BackgroundTheme.wav
+<<<<<<< Updated upstream
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\AddBomb_0.png
 D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\speed_0.png
+=======
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\GameOver_01.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Win_01.png
+>>>>>>> Stashed changes
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\AddBomb_0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\speed_0.png

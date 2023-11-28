@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Media;
 using System.Windows;
 using System.Xml;
 
@@ -61,13 +62,29 @@ namespace MyGame
 
                 if (TileMap.Instance.Tiles1[tilex, tiley] == 3)
                 {
-                    GameManager.Instance.ChangeGameStatus(3);
+                    GameManager.Instance.ChangeGameStatus(4);
                 }
             }
 
             if (id == 2)
             {
+                if (Engine.KeyPress(Engine.KEY_M))
+                {
 
+                    Bomb bomb = bombPool.GetObj();
+                    if (bomb != null)
+                    {
+                        bomb.ResetBomb();
+                        GameManager.Instance.levelController.gameObjectList.Add(bomb);
+                        bomb.Transform.SetNewPosition(new Vector2(transform.Position.x, transform.Position.y));
+                    }
+                    bombPool.PrintObj();
+                }
+
+                if (TileMap.Instance.Tiles1[tilex, tiley] == 3)
+                {
+                    GameManager.Instance.ChangeGameStatus(2);
+                }
             }
 
 
@@ -87,24 +104,49 @@ namespace MyGame
 
         private void AnimationCharacter()
         {
-            currentAnimation.Update();
-            currentAnimation = charAnim.idleAnimation;
-            
-            if (Engine.KeyPress(Engine.KEY_LEFT) && !characterMovement.IsCollidingLeft)   
+            if (id == 1)
             {
-                currentAnimation = charAnim.leftAnimation;
+                currentAnimation.Update();
+                currentAnimation = charAnim.idleAnimation;
+
+                if (Engine.KeyPress(Engine.KEY_A) && !characterMovement.IsCollidingLeft)
+                {
+                    currentAnimation = charAnim.leftAnimation;
+                }
+                if (Engine.KeyPress(Engine.KEY_D) && !characterMovement.IsCollidingRight)
+                {
+                    currentAnimation = charAnim.rightAnimation;
+                }
+                if (Engine.KeyPress(Engine.KEY_W) && !characterMovement.IsCollidingUp)
+                {
+                    currentAnimation = charAnim.upAnimation;
+                }
+                if (Engine.KeyPress(Engine.KEY_S) && !characterMovement.IsCollidingDown)
+                {
+                    currentAnimation = charAnim.downAnimation;
+                }
             }
-            if (Engine.KeyPress(Engine.KEY_RIGHT) && !characterMovement.IsCollidingRight)
+            if (id == 2)
             {
-                currentAnimation = charAnim.rightAnimation;
-            }
-            if (Engine.KeyPress(Engine.KEY_UP) && !characterMovement.IsCollidingUp)
-            {
-                currentAnimation = charAnim.upAnimation;
-            }
-            if (Engine.KeyPress(Engine.KEY_DOWN) && !characterMovement.IsCollidingDown)
-            {
-                currentAnimation = charAnim.downAnimation;
+                currentAnimation.Update();
+                currentAnimation = charAnim.idleAnimation;
+
+                if (Engine.KeyPress(Engine.KEY_LEFT) && !characterMovement.IsCollidingLeft)
+                {
+                    currentAnimation = charAnim.leftAnimation;
+                }
+                if (Engine.KeyPress(Engine.KEY_RIGHT) && !characterMovement.IsCollidingRight)
+                {
+                    currentAnimation = charAnim.rightAnimation;
+                }
+                if (Engine.KeyPress(Engine.KEY_UP) && !characterMovement.IsCollidingUp)
+                {
+                    currentAnimation = charAnim.upAnimation;
+                }
+                if (Engine.KeyPress(Engine.KEY_DOWN) && !characterMovement.IsCollidingDown)
+                {
+                    currentAnimation = charAnim.downAnimation;
+                }
             }
 
         }

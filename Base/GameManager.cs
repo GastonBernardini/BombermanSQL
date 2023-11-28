@@ -13,8 +13,12 @@ namespace MyGame
         private int gameStatus = 0; //0 inicio, 1 juego, 2 victoria, 3 derrota
         private IntPtr mainMenuScreen = Engine.LoadImage("assets/MainMenu.png");
         private IntPtr winScreen = Engine.LoadImage("assets/Win.png");
+        private IntPtr winScreen2 = Engine.LoadImage("assets/Win_01.png");
         private IntPtr gameOverScreen = Engine.LoadImage("assets/GameOver.png");
+        private IntPtr gameOverScreen2 = Engine.LoadImage("assets/GameOver_01.png");
         public LevelController levelController;
+        private Character player;
+        private Character player2;
 
         public static GameManager Instance
         {
@@ -42,17 +46,13 @@ namespace MyGame
             switch (gameStatus)
             {
                 case 0:
-                    if (Engine.KeyPress(Engine.KEY_ESP))
+                    if (Engine.KeyPress(Engine.KEY_C))
                     {
                         gameStatus = 1;
                     }
                     break;
                 case 1:
                     levelController.Update();
-                    if (TileMap.Instance.CurrentDestroyableBuildings == 0)
-                    {
-                        gameStatus = 2;
-                    }
                     break;
                 case 2:
                     //  Program.Update();
@@ -86,6 +86,12 @@ namespace MyGame
                     break;
                 case 3:
                     Engine.Draw(gameOverScreen, 0, 0);
+                    break;
+                case 4:
+                    Engine.Draw (winScreen2, 0, 0);
+                    break;
+                case 5:
+                    Engine.Draw (gameOverScreen2, 0, 0);
                     break;
             }
             Engine.Show();

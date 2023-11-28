@@ -45,44 +45,11 @@ namespace MyGame
             {
                 if (currentTimer == movementTimer)
                 {
-                    if (Engine.KeyPress(Engine.KEY_LEFT) && !isCollidingLeft)
-                    {
-                        player.Transform.Translate(new Vector2(-1, 0), speed);
-                        currentTimer = 0;
-                        pickupObject();
-                    }
-                    if (Engine.KeyPress(Engine.KEY_RIGHT) && !isCollidingRight)
-                    {
-                        player.Transform.Translate(new Vector2(1, 0), speed);
-                        currentTimer = 0;
-                        pickupObject();
-                    }
-                    if (Engine.KeyPress(Engine.KEY_UP) && !isCollidingUp)
-                    {
-                        player.Transform.Translate(new Vector2(0, -1), speed);
-                        currentTimer = 0;
-                        pickupObject();
-                    }
-                    if (Engine.KeyPress(Engine.KEY_DOWN) && !isCollidingDown)
-                    {
-                        player.Transform.Translate(new Vector2(0, 1), speed);
-                        currentTimer = 0;
-                        pickupObject();
-                    }
-                };
-            }
-
-            if (player.Id == 2)
-            {
-                if (currentTimer == movementTimer)
-                {
                     if (Engine.KeyPress(Engine.KEY_A) && !isCollidingLeft)
                     {
                         player.Transform.Translate(new Vector2(-1, 0), speed);
                         currentTimer = 0;
                         pickupObject();
-
-
                     }
                     if (Engine.KeyPress(Engine.KEY_D) && !isCollidingRight)
                     {
@@ -97,6 +64,39 @@ namespace MyGame
                         pickupObject();
                     }
                     if (Engine.KeyPress(Engine.KEY_S) && !isCollidingDown)
+                    {
+                        player.Transform.Translate(new Vector2(0, 1), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                };
+            }
+
+            if (player.Id == 2)
+            {
+                if (currentTimer == movementTimer)
+                {
+                    if (Engine.KeyPress(Engine.KEY_LEFT) && !isCollidingLeft)
+                    {
+                        player.Transform.Translate(new Vector2(-1, 0), speed);
+                        currentTimer = 0;
+                        pickupObject();
+
+
+                    }
+                    if (Engine.KeyPress(Engine.KEY_RIGHT) && !isCollidingRight)
+                    {
+                        player.Transform.Translate(new Vector2(1, 0), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                    if (Engine.KeyPress(Engine.KEY_UP) && !isCollidingUp)
+                    {
+                        player.Transform.Translate(new Vector2(0, -1), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                    if (Engine.KeyPress(Engine.KEY_DOWN) && !isCollidingDown)
                     {
                         player.Transform.Translate(new Vector2(0, 1), speed);
                         currentTimer = 0;

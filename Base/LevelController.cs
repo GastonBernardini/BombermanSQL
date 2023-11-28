@@ -21,7 +21,7 @@ namespace MyGame
         public void Initialization()
         {
             player = (new Character(new Vector2(75, 75), 75, 15, 1));
-            player2 = (new Character(new Vector2(825,825),75,15,2));
+            player2 = (new Character(new Vector2(925,825),75,15,2));
             _startTime = DateTime.Now;
             powerupCreator = new PowerupCreator(5);
         }
