@@ -1,123 +1,5 @@
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\obj\Debug\MyGame.csproj.AssemblyReference.cache
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\bin\Debug\assets\0.png
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\bin\Debug\assets\1.png
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\bin\Debug\assets\2.png
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\bin\Debug\MyGame.exe.config
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\bin\Debug\MyGame.exe
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\bin\Debug\MyGame.pdb
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\obj\Debug\MyGame.csproj.CopyComplete
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\obj\Debug\MyGame.exe
-C:\Users\Admin\Downloads\06b2-MiniFreddy01b\MiniFreddy\MiniFreddy\obj\Debug\MyGame.pdb
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\MyGame.exe.config
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\MyGame.exe
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\MyGame.pdb
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.csproj.CopyComplete
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.exe
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.pdb
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\fondo.png
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\player.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\assets\player.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\assets\fondo.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\MyGame.exe.config
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\MyGame.exe
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\MyGame.pdb
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\obj\Debug\MyGame.csproj.CopyComplete
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\obj\Debug\MyGame.exe
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\obj\Debug\MyGame.pdb
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\assets\Ship\Idle\0.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\assets\Ship\Idle\1.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\assets\Ship\Idle\2.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE FINAL\Base\bin\Debug\assets\Ship\Idle\3.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\player.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\fondo.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\Ship\Idle\0.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\Ship\Idle\1.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\Ship\Idle\2.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\Ship\Idle\3.png
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\MyGame.exe.config
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\MyGame.exe
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\MyGame.pdb
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.csproj.CopyComplete
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.exe
-C:\Users\Admin\Dropbox\Facultad\UADE OBJETOS\BASE\Base\obj\Debug\MyGame.pdb
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\Ship\Idle\0.png
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\Ship\Idle\1.png
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\Ship\Idle\2.png
-C:\Users\Consultoria\Dropbox\Facultad\UADE OBJETOS\BASE\Base\bin\Debug\assets\Ship\Idle\3.png
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\bin\Debug\assets\player.png
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\bin\Debug\assets\fondo.png
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\bin\Debug\MyGame.exe.config
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\bin\Debug\MyGame.exe
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\bin\Debug\MyGame.pdb
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.csproj.CopyComplete
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.exe
-C:\Users\gasto\Documents\Git Proyects\BombermanSQL\Base\obj\Debug\MyGame.pdb
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\player.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\fondo.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\MyGame.exe.config
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\MyGame.exe
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\MyGame.pdb
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.csproj.CopyComplete
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.exe
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\obj\Debug\MyGame.pdb
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.exe
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.pdb
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\tile0.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\tile1.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\tile2.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\GameOver.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\MainMenu.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Win.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\bomba.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\explosion.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\bomba.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\explosion.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\GameOver.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\MainMenu.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\player.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\fondo.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\tile0.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\tile1.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\tile2.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Win.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\MyGame.exe.config
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\MyGame.exe
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\MyGame.pdb
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.CopyComplete
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_0.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_1.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_10.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_11.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_12.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_13.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_14.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_2.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_3.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_4.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_5.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_6.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_7.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_8.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_9.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\AddBomb_0.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_0.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_1.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_10.png
@@ -133,10 +15,7 @@ C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_6.p
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_7.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_8.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\Bomb_9.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right0.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right1.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right2.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right3.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\GameOver_01.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down0.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down1.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down2.png
@@ -146,37 +25,33 @@ C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Left
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left1.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left2.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left3.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right1.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right2.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right3.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\explosion.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\GameOver.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\MainMenu.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\player.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\fondo.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up0.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up1.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up2.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up3.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up4.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down0.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down1.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down2.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Down\B_Down3.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Idle\B_Idle0.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left0.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left1.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left2.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Left\B_Left3.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right0.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right1.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right2.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Right\B_Right3.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up0.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up1.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up2.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up3.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Player\B_Up\B_Up4.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\BackgroundTheme.wav
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\BackgroundTheme.wav
-<<<<<<< Updated upstream
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\Bomb\AddBomb_0.png
-D:\1UADE\Paradigmas de programación\BombermanSQL\Base\bin\Debug\assets\speed_0.png
-=======
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\GameOver_01.png
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Win_01.png
->>>>>>> Stashed changes
-C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Bomb\AddBomb_0.png
 C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\speed_0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\tile0.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\tile2.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\tile1.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Win.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\assets\Win_01.png
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\MyGame.exe.config
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\MyGame.exe
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\bin\Debug\MyGame.pdb
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.AssemblyReference.cache
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.csproj.CopyComplete
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.exe
+C:\Users\gasto\Documents\GitHub\BombermanSQL\Base\obj\Debug\MyGame.pdb

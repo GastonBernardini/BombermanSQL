@@ -32,7 +32,7 @@ namespace MyGame
             Random rndPos = new Random();
             int rollPos = rndPos.Next(1,5);
             Random rndType = new Random();
-            int rollType = rndType.Next(1, 3);
+            int rollType = rndType.Next(0, 3);
             if (roll == 1)
             {
                 Engine.Debug("¡Se logró crear un powerup!");
