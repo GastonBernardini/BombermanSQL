@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ namespace MyGame
         private IntPtr mainMenuScreen = Engine.LoadImage("assets/MainMenu.png");
         private IntPtr winScreen = Engine.LoadImage("assets/Win.png");
         private IntPtr gameOverScreen = Engine.LoadImage("assets/GameOver.png");
+        public LevelController levelController;
 
         public static GameManager Instance
         {
@@ -27,8 +29,16 @@ namespace MyGame
             }
         }
 
+        public void Initialize()
+        {
+            Engine.Initialize();
+            levelController = new LevelController();
+            levelController.Initialization();
+        }
+
         public void Update()
         {
+            //musicPlayer.Play();
             switch (gameStatus)
             {
                 case 0:
@@ -38,7 +48,7 @@ namespace MyGame
                     }
                     break;
                 case 1:
-                    Program.Update();
+                    levelController.Update();
                     if (TileMap.Instance.CurrentDestroyableBuildings == 0)
                     {
                         gameStatus = 2;
@@ -48,6 +58,7 @@ namespace MyGame
                     //  Program.Update();
                     break;
                 case 3:
+
                     //   Program.Update();
                     break;
             }
@@ -68,7 +79,7 @@ namespace MyGame
                     Engine.Draw(mainMenuScreen, 0, 0);
                     break;
                 case 1:
-                    Program.Render();
+                    levelController.Render();
                     break;
                 case 2:
                     Engine.Draw(winScreen, 0, 0);

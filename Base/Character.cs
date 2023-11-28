@@ -43,7 +43,7 @@ namespace MyGame
                 Bomb bomb = bombPool.GetObj();
                 if (bomb != null) {
                     bomb.ResetBomb();
-                    Program.gameObjectList.Add(bomb);
+                    GameManager.Instance.levelController.gameObjectList.Add(bomb);
                     bomb.Transform.SetNewPosition(new Vector2(transform.Position.x, transform.Position.y));
                 }
                 bombPool.PrintObj();

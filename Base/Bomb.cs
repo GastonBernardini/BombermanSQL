@@ -72,7 +72,7 @@ namespace MyGame
         public void Dispose()
         {
             OnDispose.Invoke(this);
-            Program.gameObjectList.Remove(this);
+            GameManager.Instance.levelController.gameObjectList.Remove(this);
         }
 
         private void explosion()

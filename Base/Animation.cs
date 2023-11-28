@@ -28,7 +28,7 @@ namespace MyGame
 
         public void Update()
         {
-            currentAnimationTime += Program.DeltaTime;
+            currentAnimationTime += GameManager.Instance.levelController.DeltaTime;
 
             if (currentAnimationTime >= speed)
             {
