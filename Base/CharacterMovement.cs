@@ -8,6 +8,7 @@ namespace MyGame
     public class CharacterMovement
     {
         private Character player;
+        private Character player2;
 
         private float movementTimer;
         private float currentTimer;
@@ -75,7 +76,35 @@ namespace MyGame
 
             if (player.Id == 2)
             {
+                if (currentTimer == movementTimer)
+                {
+                    if (Engine.KeyPress(Engine.KEY_A) && !isCollidingLeft)
+                    {
+                        player.Transform.Translate(new Vector2(-1, 0), speed);
+                        currentTimer = 0;
+                        pickupObject();
 
+
+                    }
+                    if (Engine.KeyPress(Engine.KEY_D) && !isCollidingRight)
+                    {
+                        player.Transform.Translate(new Vector2(1, 0), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                    if (Engine.KeyPress(Engine.KEY_W) && !isCollidingUp)
+                    {
+                        player.Transform.Translate(new Vector2(0, -1), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                    if (Engine.KeyPress(Engine.KEY_S) && !isCollidingDown)
+                    {
+                        player.Transform.Translate(new Vector2(0, 1), speed);
+                        currentTimer = 0;
+                        pickupObject();
+                    }
+                }
             }
 
             if (currentTimer < movementTimer)

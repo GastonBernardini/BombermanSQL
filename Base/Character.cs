@@ -28,12 +28,13 @@ namespace MyGame
 
         public Character(Vector2 pos, float speed, float movementTimer, int id) : base(pos)
         {
+            this.id = id;
             charAnim = new CharacterAnimations(this);
             CreateAnimations();
             currentAnimation = charAnim.idleAnimation;
             characterMovement = new CharacterMovement(this, movementTimer, speed);
             bombPool = new StaticPool<Bomb>(1, new Bomb(Vector2.Zero));
-            this.id = id;
+            
         }
 
         public override void Update()
@@ -87,23 +88,23 @@ namespace MyGame
         private void AnimationCharacter()
         {
             currentAnimation.Update();
-            currentAnimation = idleAnimation;
+            currentAnimation = charAnim.idleAnimation;
             
             if (Engine.KeyPress(Engine.KEY_LEFT) && !characterMovement.IsCollidingLeft)   
             {
-                currentAnimation = leftAnimation;
+                currentAnimation = charAnim.leftAnimation;
             }
             if (Engine.KeyPress(Engine.KEY_RIGHT) && !characterMovement.IsCollidingRight)
             {
-                currentAnimation = rightAnimation;
+                currentAnimation = charAnim.rightAnimation;
             }
             if (Engine.KeyPress(Engine.KEY_UP) && !characterMovement.IsCollidingUp)
             {
-                currentAnimation = upAnimation;
+                currentAnimation = charAnim.upAnimation;
             }
             if (Engine.KeyPress(Engine.KEY_DOWN) && !characterMovement.IsCollidingDown)
             {
-                currentAnimation = downAnimation;
+                currentAnimation = charAnim.downAnimation;
             }
 
         }

@@ -14,11 +14,13 @@ namespace MyGame
         private static float _lastTimeFrame;
         public float DeltaTime;
         public static Character player;
+        public static Character player2;
         public List<GameObject> gameObjectList = new List<GameObject>();
 
         public void Initialization()
         {
             player = (new Character(new Vector2(75, 75), 75, 15, 1));
+            player2 = (new Character(new Vector2(825,825),75,15,2));
             _startTime = DateTime.Now;
         }
 
@@ -29,6 +31,7 @@ namespace MyGame
             _lastTimeFrame = currentTime;
             
             player.Update();
+            player2.Update();
 
             if (gameObjectList.Count > 0)
             {
@@ -52,6 +55,7 @@ namespace MyGame
                 }
             }
             player.Render();
+            player2.Render();
             Engine.Show();
         }
 
