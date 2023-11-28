@@ -15,6 +15,7 @@ namespace MyGame
         public float DeltaTime;
         public static Character player;
         public static Character player2;
+        public static PowerupCreator powerupCreator;
         public List<GameObject> gameObjectList = new List<GameObject>();
 
         public void Initialization()
@@ -22,6 +23,7 @@ namespace MyGame
             player = (new Character(new Vector2(75, 75), 75, 15, 1));
             player2 = (new Character(new Vector2(825,825),75,15,2));
             _startTime = DateTime.Now;
+            powerupCreator = new PowerupCreator(5);
         }
 
         public void Update()
@@ -32,6 +34,7 @@ namespace MyGame
             
             player.Update();
             player2.Update();
+            powerupCreator.Update();
 
             if (gameObjectList.Count > 0)
             {

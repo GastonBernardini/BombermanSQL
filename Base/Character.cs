@@ -23,7 +23,7 @@ namespace MyGame
 
         public StaticPool<Bomb> bombPool;
 
-        private CharacterMovement characterMovement;
+        public CharacterMovement characterMovement;
         private CharacterAnimations charAnim;
 
         public Character(Vector2 pos, float speed, float movementTimer, int id) : base(pos)

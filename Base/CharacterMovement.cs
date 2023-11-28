@@ -114,11 +114,11 @@ namespace MyGame
 
         private void pickupObject()
         {
-            foreach (GameObject gameObject in GameManager.Instance.levelController.gameObjectList)
+            foreach (GameObject gameObject in GameManager.Instance.levelController.gameObjectList.ToArray())
             {
                 if (gameObject is IPickupeable objPickup && gameObject.Transform.Position == player.Transform.Position)
                 {
-                    objPickup.Pickup();
+                    objPickup.Pickup(player);
                 }
             }
         }

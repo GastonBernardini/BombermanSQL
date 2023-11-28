@@ -8,6 +8,6 @@ namespace MyGame
 {
     public interface IPickupeable
     {
-        void Pickup();
+        void Pickup(Character player);
     }
 }
